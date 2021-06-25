@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitWise-App", "SplitWise-App\SplitWise-App.csproj", "{C56650DC-D4BA-4065-9C86-624FFAC05B4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitWise-Business", "SplitWise-Business\SplitWise-Business.csproj", "{9DD7869C-5C29-4FC6-8556-1DB61F9C71E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitWise-Services", "SplitWise-Services\SplitWise-Services.csproj", "{C0D65C73-6F36-42DE-9E0E-28EAEEA541BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitWise-Models", "SplitWise-Models\SplitWise-Models.csproj", "{D1771EFC-8498-465E-8F2A-8467E076ABA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitWise-Store", "SplitWise-Store\SplitWise-Store.csproj", "{217D30B7-E186-4B35-89D4-36E234B27A4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitWise-Constants", "SplitWise-Constants\SplitWise-Constants.csproj", "{642B0C00-695B-4688-ACAD-1F65A71216D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C56650DC-D4BA-4065-9C86-624FFAC05B4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C56650DC-D4BA-4065-9C86-624FFAC05B4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C56650DC-D4BA-4065-9C86-624FFAC05B4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C56650DC-D4BA-4065-9C86-624FFAC05B4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DD7869C-5C29-4FC6-8556-1DB61F9C71E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DD7869C-5C29-4FC6-8556-1DB61F9C71E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DD7869C-5C29-4FC6-8556-1DB61F9C71E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DD7869C-5C29-4FC6-8556-1DB61F9C71E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0D65C73-6F36-42DE-9E0E-28EAEEA541BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0D65C73-6F36-42DE-9E0E-28EAEEA541BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0D65C73-6F36-42DE-9E0E-28EAEEA541BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0D65C73-6F36-42DE-9E0E-28EAEEA541BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1771EFC-8498-465E-8F2A-8467E076ABA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1771EFC-8498-465E-8F2A-8467E076ABA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1771EFC-8498-465E-8F2A-8467E076ABA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1771EFC-8498-465E-8F2A-8467E076ABA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{217D30B7-E186-4B35-89D4-36E234B27A4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{217D30B7-E186-4B35-89D4-36E234B27A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{217D30B7-E186-4B35-89D4-36E234B27A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{217D30B7-E186-4B35-89D4-36E234B27A4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{642B0C00-695B-4688-ACAD-1F65A71216D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{642B0C00-695B-4688-ACAD-1F65A71216D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{642B0C00-695B-4688-ACAD-1F65A71216D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{642B0C00-695B-4688-ACAD-1F65A71216D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B662B14-0E5B-4DB3-BC6D-5CCF28E08D7E}
+	EndGlobalSection
+EndGlobal

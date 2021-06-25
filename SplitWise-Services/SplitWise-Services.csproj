@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>SplitWise_Services</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SplitWise-Models\SplitWise-Models.csproj" />
+    <ProjectReference Include="..\SplitWise-Store\SplitWise-Store.csproj" />
+  </ItemGroup>
+
+</Project>

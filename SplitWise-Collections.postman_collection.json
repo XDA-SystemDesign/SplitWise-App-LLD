@@ -1,0 +1,674 @@
+{
+	"info": {
+		"_postman_id": "5aa25990-3af3-4e82-8c1d-c1fce8983f28",
+		"name": "SplitWise-Collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User-Group-Creation",
+			"item": [
+				{
+					"name": "User-Group-Creation-03",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"groupName\": \"Group-03\",\r\n    \"users\": [\r\n        {\r\n            \"name\": \"G\"\r\n        },\r\n        {\r\n            \"name\": \"H\"\r\n        },\r\n        {\r\n            \"name\": \"I\"\r\n        },\r\n        {\r\n            \"name\": \"J\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44395/api/Group/CreateGroupAlongWithUsers",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"Group",
+								"CreateGroupAlongWithUsers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Group-01",
+			"item": [
+				{
+					"name": "Add Expenses",
+					"item": [
+						{
+							"name": "Create-Expense-01",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"groupId\": 1,\r\n  \"splitType\": 1,\r\n  \"userExpenditures\": [\r\n    {\r\n      \"userId\": 1,\r\n      \"how_much_the_user_spent_on_the_group\": 10000\r\n    }\r\n  ],\r\n  \"userContributions\": [\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44395/api/Expense",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44395",
+									"path": [
+										"api",
+										"Expense"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create-Expense-02",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"groupId\": 1,\r\n  \"splitType\": 2,\r\n  \"userExpenditures\": [\r\n    {\r\n      \"userId\": 1,\r\n      \"how_much_the_user_spent_on_the_group\": 10000\r\n    },\r\n    {\r\n      \"userId\": 2,\r\n      \"how_much_the_user_spent_on_the_group\": 5000\r\n    }\r\n  ],\r\n  \"userContributions\": [\r\n    {\r\n      \"userId\": 1,\r\n      \"contribution\": 3000\r\n    },\r\n    {\r\n      \"userId\": 2,\r\n      \"contribution\": 2000\r\n    },\r\n    {\r\n      \"userId\": 3,\r\n      \"contribution\": 10000\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44395/api/Expense",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44395",
+									"path": [
+										"api",
+										"Expense"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get Expense Summary",
+					"item": [
+						{
+							"name": "Get-Expense-Summary-01",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44395/api/Expense/GetSummary?id=1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44395",
+									"path": [
+										"api",
+										"Expense",
+										"GetSummary"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get-Expense-Summary-02",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44395/api/Expense/GetSummary?id=2",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44395",
+									"path": [
+										"api",
+										"Expense",
+										"GetSummary"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create-Settlements",
+					"item": [
+						{
+							"name": "Settlement-01",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"groupID_under_which_settlement_is_done\": 1,\r\n  \"fromUserID\": 2,\r\n  \"toUserID\": 1,\r\n  \"amount_Settled\": 300.00\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44395/api/Settlement",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44395",
+									"path": [
+										"api",
+										"Settlement"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Settlement-02",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"groupID_under_which_settlement_is_done\": 1,\r\n  \"fromUserID\": 3,\r\n  \"toUserID\": 2,\r\n  \"amount_Settled\": 2000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44395/api/Settlement",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44395",
+									"path": [
+										"api",
+										"Settlement"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get-Group-Summary",
+					"item": [
+						{
+							"name": "Get-Group-Summary-01",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44395/api/GroupSummary?UserId=1&GroupId=1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44395",
+									"path": [
+										"api",
+										"GroupSummary"
+									],
+									"query": [
+										{
+											"key": "UserId",
+											"value": "1"
+										},
+										{
+											"key": "GroupId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get-Group-Summary-02",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44395/api/GroupSummary?UserId=3&GroupId=1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44395",
+									"path": [
+										"api",
+										"GroupSummary"
+									],
+									"query": [
+										{
+											"key": "UserId",
+											"value": "3"
+										},
+										{
+											"key": "GroupId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get-Group-Summary-03",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44395/api/GroupSummary?UserId=2&GroupId=1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44395",
+									"path": [
+										"api",
+										"GroupSummary"
+									],
+									"query": [
+										{
+											"key": "UserId",
+											"value": "2"
+										},
+										{
+											"key": "GroupId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User-Group-Creation-01",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"groupName\": \"Group-01\",\r\n    \"users\": [\r\n        {\r\n            \"name\": \"A\"\r\n        },\r\n        {\r\n            \"name\": \"B\"\r\n        },\r\n        {\r\n            \"name\": \"C\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44395/api/Group/CreateGroupAlongWithUsers",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"Group",
+								"CreateGroupAlongWithUsers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Group-02",
+			"item": [
+				{
+					"name": "Add Expenses",
+					"item": [
+						{
+							"name": "Create-Expense-01",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"groupId\": 2,\r\n  \"splitType\": 1,\r\n  \"userExpenditures\": [\r\n    {\r\n      \"userId\": 4,\r\n      \"how_much_the_user_spent_on_the_group\": 9000\r\n    }\r\n  ],\r\n  \"userContributions\": [\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44395/api/Expense",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44395",
+									"path": [
+										"api",
+										"Expense"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create-Expense-02",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"groupId\": 2,\r\n  \"splitType\": 3,\r\n  \"userExpenditures\": [\r\n    {\r\n      \"userId\": 5,\r\n      \"how_much_the_user_spent_on_the_group\": 10000\r\n    },\r\n    {\r\n      \"userId\": 6,\r\n      \"how_much_the_user_spent_on_the_group\": 5000\r\n    }\r\n  ],\r\n  \"userContributions\": [\r\n    {\r\n      \"userId\": 4,\r\n      \"contribution\": 10\r\n    },\r\n    {\r\n      \"userId\": 5,\r\n      \"contribution\": 40\r\n    },\r\n    {\r\n      \"userId\": 6,\r\n      \"contribution\": 50\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44395/api/Expense",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44395",
+									"path": [
+										"api",
+										"Expense"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get Expense Summary",
+					"item": [
+						{
+							"name": "Get-Expense-Summary-01",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44395/api/Expense/GetSummary?id=2",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44395",
+									"path": [
+										"api",
+										"Expense",
+										"GetSummary"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get-Expense-Summary-02",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44395/api/Expense/GetSummary?id=3",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44395",
+									"path": [
+										"api",
+										"Expense",
+										"GetSummary"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create-Settlements",
+					"item": [
+						{
+							"name": "Settlement-01",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"groupID_under_which_settlement_is_done\": 2,\r\n  \"fromUserID\": 5,\r\n  \"toUserID\": 4,\r\n  \"amount_Settled\": 300.00\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44395/api/Settlement",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44395",
+									"path": [
+										"api",
+										"Settlement"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Settlement-02",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"groupID_under_which_settlement_is_done\": 1,\r\n  \"fromUserID\": 2,\r\n  \"toUserID\": 1,\r\n  \"amount_Settled\": 300.00\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44395/api/Settlement",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44395",
+									"path": [
+										"api",
+										"Settlement"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get-Group-Summary",
+					"item": [
+						{
+							"name": "Get-Group-Summary-01",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44395/api/GroupSummary?UserId=4&GroupId=2",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44395",
+									"path": [
+										"api",
+										"GroupSummary"
+									],
+									"query": [
+										{
+											"key": "UserId",
+											"value": "4"
+										},
+										{
+											"key": "GroupId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get-Group-Summary-02",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44395/api/GroupSummary?UserId=4&GroupId=2",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44395",
+									"path": [
+										"api",
+										"GroupSummary"
+									],
+									"query": [
+										{
+											"key": "UserId",
+											"value": "4"
+										},
+										{
+											"key": "GroupId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get-Group-Summary-03",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44395/api/GroupSummary?UserId=6&GroupId=2",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44395",
+									"path": [
+										"api",
+										"GroupSummary"
+									],
+									"query": [
+										{
+											"key": "UserId",
+											"value": "6"
+										},
+										{
+											"key": "GroupId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User-Group-Creation-02",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"groupName\": \"Group-02\",\r\n    \"users\": [\r\n        {\r\n            \"name\": \"D\"\r\n        },\r\n        {\r\n            \"name\": \"E\"\r\n        },\r\n        {\r\n            \"name\": \"F\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44395/api/Group/CreateGroupAlongWithUsers",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44395",
+							"path": [
+								"api",
+								"Group",
+								"CreateGroupAlongWithUsers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
